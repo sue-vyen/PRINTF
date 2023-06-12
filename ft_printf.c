@@ -6,20 +6,20 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:39:29 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/12 10:17:41 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/12 15:55:28 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *, ...)
+int	ft_printf(const char *format, ...)
 {
 
 }
 
 
 /*
-PROTOTYPE EXP (int ft_printf(const char*, ...)):
+PROTOTYPE EXP (int ft_printf(const char *format, ...)):
 -> format = the str that contains the text to be written to stdout.
 = can contain embedded format tags
 
