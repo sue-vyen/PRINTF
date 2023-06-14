@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:39:29 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/12 15:55:28 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/14 14:46:58 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 
 int	ft_printf(const char *format, ...)
 {
+	va_list	args;
+	int		len;
 
+	va_start(args, str);
+	len = process_str(args, format);
+	va_end(args);
 }
 
 
