@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 12:02:55 by sloke             #+#    #+#              #
-#    Updated: 2023/06/12 15:48:09 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/19 15:03:59 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,3 +54,7 @@ re: fclean all
 .PHONY: all clean fclean re
 # used to declare the phony targets to esure they are always considered targets
 # and not file names
+
+m:
+	@cc -Wall -Werror -Wextra ft_printf.c mainprintf.c process_str.c specifier_x_X.c ft_strlen.c ft_putstr_fd.c ft_putchar_fd.c specifier_p.c specifier_d.c ft_putnbrr_fd.c
+	@./a.out | cat -e

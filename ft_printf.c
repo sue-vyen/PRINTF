@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:39:29 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/14 14:46:58 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/19 15:14:21 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	int		len;
 
-	va_start(args, str);
-	len = process_str(args, format);
+	va_start(args, format);
+	len = 0;
+	process_str(args, format, &len);
 	va_end(args);
+	return (len);
 }
-
 
 /*
 PROTOTYPE EXP (int ft_printf(const char *format, ...)):
@@ -52,4 +53,3 @@ failue = a negative nb
 	- functions whose total nb of elements is unknown at the beginning
 	- delcare it, init it, move through it, close it
 */
-
