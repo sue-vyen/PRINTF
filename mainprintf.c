@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 15:32:22 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/19 16:24:49 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/19 16:44:27 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ int	main(void)
 
 	c = NULL;
 
-	// printf("length: %d", ft_printf("hello world\n"));
-	// printf("length: %d", ft_printf("before char: %c\n", 'A'));
 	int self = 0;
 	int theirs = 0;
 	self = ft_printf("before lowercase: %x\n", 25066);
@@ -36,13 +34,19 @@ int	main(void)
 	theirs = printf("before uppercase: %X\n", 25066);
 	printf("\ntotal number uppercase printed: %d, %d\n", self, theirs);
 
+	self =ft_printf("before dec: %d\n", 1235);
+	theirs = printf("before dec: %d\n", 1235);
+	printf("\ntotal number decimal printed: %d, %d\n", self, theirs);
 
-	// ft_printf("before uppercase: %X\n", 25066);
-	// ft_printf("before pointer: %p\n", &c);
-	// ft_printf("before dec: %d\n", 1235);
-	// ft_printf("before int: %i\n", INT_MAX);
-	// ft_printf("before unint %u\n", 1234);
-	// ft_printf("%%\n");
-	// ft_printf("hi");
-	// ft_printf("%s", "Hello world");
+	self =ft_printf("before int: %i\n", INT_MAX);
+	theirs = printf("before int: %i\n", INT_MAX);
+	printf("\ntotal number decimal printed: %d, %d\n", self, theirs);
+
+	self = ft_printf("before unint %u\n", -1234);
+	theirs = printf("before unint %u\n", -1234);
+	printf("\ntotal number decimal printed: %d, %d\n", self, theirs);
+
+	self =ft_printf("%%\n");
+	theirs = printf("%%\n");
+	printf("\ntotal number decimal printed: %d, %d\n", self, theirs);
 }
