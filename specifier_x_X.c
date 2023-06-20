@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 15:21:15 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 10:42:51 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 12:10:14 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 void	nb_of_digits(unsigned long nb, int *count)
 {
 	*count = 0;
+	if (nb == 0)
+		*count = 1;
 	while (nb > 0)
 	{
 		nb /= 16;
@@ -54,5 +56,6 @@ int	ft_lowupcase(unsigned int nb, char *base)
 		num /= 16;
 	}
 	ft_putstr_fd(rtn, 1);
+	free(rtn);
 	return (len);
 }

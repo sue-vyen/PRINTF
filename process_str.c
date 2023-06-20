@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 14:40:09 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 10:44:09 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 11:15:12 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,16 @@ int	check_specifier(const char *format, va_list args)
 	if (*format == 's')
 	{
 		str = va_arg(args, char *);
-		ft_putstr_fd(str, 1);
-		(len) = ft_strlen(str);
+		if (str == NULL)
+		{
+			ft_putstr_fd("(null)", 1);
+			(len) = ft_strlen("(null)");
+		}
+		else
+		{
+			ft_putstr_fd(str, 1);
+			(len) = ft_strlen(str);
+		}
 	}
 	return (len);
 }

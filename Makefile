@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 12:02:55 by sloke             #+#    #+#              #
-#    Updated: 2023/06/20 10:35:30 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/20 11:48:23 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,6 @@ re: fclean all
 # used to declare the phony targets to esure they are always considered targets
 # and not file names
 
-# m:
-# 	@cc -Wall -Werror -Wextra ft_printf.c mainprintf.c process_str.c specifier_x_X.c ft_strlen.c ft_putstr_fd.c ft_putchar_fd.c specifier_p.c ft_putnbrr_fd.c
-# 	@./a.out 
+m:
+	@cc -Wall -Werror -Wextra ft_printf.c mainprintf.c process_str.c specifier_x_X.c ft_strlen.c ft_putstr_fd.c ft_putchar_fd.c specifier_p.c ft_putnbrr_fd.c
+	@./a.out 
