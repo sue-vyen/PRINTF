@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 15:21:15 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 12:10:14 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 16:24:36 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ char	*allocate_memory(int count)
 	return (rtn);
 }
 
-int	ft_lowupcase(unsigned int nb, char *base)
+int	ft_lowupcase(unsigned long nb, char *base)
 {
 	int				count;
 	unsigned long	num;
 	char			*rtn;
-	int				temp;
+	unsigned long	temp;
 	int				len;
 
 	len = 0;

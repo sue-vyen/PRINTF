@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:39:29 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 10:42:59 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 16:48:51 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ int	ft_printf(const char *format, ...)
 PROTOTYPE EXP (int ft_printf(const char *format, ...)):
 -> format = the str that contains the text to be written to stdout.
 = can contain embedded format tags
-
-FORMAT TAGS PROTOTYPE:
--> %[flags][width][.precision][length]specifier <-
 
 RETURN VALUE:
 success = total nb of chars written 

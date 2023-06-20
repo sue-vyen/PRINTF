@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/12 15:56:48 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 10:41:38 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 16:18:55 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ void	nb_of_digits(unsigned long nb, int *count);
 char	*allocate_memory(int count);
 
 int		ft_pointer(unsigned long nb, char *base);
+int		handle_zero(void);
 int		ft_decnint(int nb);
 int		ft_unsignedint(unsigned int nb);
-int		ft_lowupcase(unsigned int nb, char *base);
+int		ft_lowupcase(unsigned long nb, char *base);
 int		ft_percent(void);
 
 void	ft_putchar_fd(char c, int fd);

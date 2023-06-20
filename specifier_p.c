@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 15:22:51 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 12:07:41 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 15:38:42 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ int	ft_pointer(unsigned long nb, char *base)
 	nb_of_digits(nb, &count);
 	len = count;
 	if (nb == 0)
-	{
-		ft_putstr_fd("0x0", 1);
-		return (len + 2);
-	}
+		return (handle_zero());
 	rtn = allocate_memory(count + 2);
 	count = count + 2;
 	rtn[count--] = '\0';
@@ -44,3 +41,11 @@ int	ft_pointer(unsigned long nb, char *base)
 	return (len + 2);
 }
 
+int	handle_zero(void)
+{
+	int	len;
+
+	len = 0;
+	ft_putstr_fd("0x0", 1);
+	return (len + 3);
+}
