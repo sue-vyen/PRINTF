@@ -6,7 +6,7 @@
 #    By: sloke <sloke@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/12 12:02:55 by sloke             #+#    #+#              #
-#    Updated: 2023/06/19 15:03:59 by sloke            ###   ########.fr        #
+#    Updated: 2023/06/20 10:35:30 by sloke            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,19 +15,12 @@ NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-CPPFLAGS = -I $(LIBFT_PATH)
-# compiler flags for including header files from the "libft" library 
-LIBFT_PATH = ./libft
-
-LIBFT = $(LIBFT_PATH)/libft.a
-
-SRCS = ft_printf.c \
+SRCS = ft_printf.c ft_putchar_fd.c ft_putnbrr_fd.c ft_putstr_fd.c ft_strlen.c \
+		specifier_p.c specifier_x_X.c process_str.c\
 
 OBJS = $(SRCS:.c=.o)
 # obj files generated from the source files
 $(NAME): $(OBJS)
-	cd libft && $(MAKE) 
-	cp libft/libft.a $(NAME)
 	ar -rcs $(NAME) $(OBJS)
 	ranlib $(NAME)
 # 1st: specifies the target $(NAME); lists its dependencies as $(OBJS)
@@ -40,13 +33,11 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	cd libft && $(MAKE) clean
 	rm -f $(OBJS)
 # rule for cleaning the obj files and intermediate files
 # changes directory to libft and execute the make clean command to clean the .o files
 # remove the .o files generated from the src files $(OBJS)
 fclean : clean
-	cd libft && $(MAKE) fclean
 	rm -f $(NAME)
 # " as clean, remove the library file $(NAME)
 re: fclean all
@@ -55,6 +46,6 @@ re: fclean all
 # used to declare the phony targets to esure they are always considered targets
 # and not file names
 
-m:
-	@cc -Wall -Werror -Wextra ft_printf.c mainprintf.c process_str.c specifier_x_X.c ft_strlen.c ft_putstr_fd.c ft_putchar_fd.c specifier_p.c specifier_d.c ft_putnbrr_fd.c
-	@./a.out | cat -e
+# m:
+# 	@cc -Wall -Werror -Wextra ft_printf.c mainprintf.c process_str.c specifier_x_X.c ft_strlen.c ft_putstr_fd.c ft_putchar_fd.c specifier_p.c ft_putnbrr_fd.c
+# 	@./a.out 

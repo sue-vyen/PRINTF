@@ -6,7 +6,7 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 14:40:09 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/19 16:30:38 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 09:50:41 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ void	check_specifier2(const char *format, va_list args, int *len)
 		*len += ft_lowupcase(va_arg(args, unsigned int), "0123456789ABCDEF");
 	if (*format == '%')
 		*len += write(1, "%", 1);
-	// return (*len);
 }
 
 int	check_specifier(const char *format, va_list args)
