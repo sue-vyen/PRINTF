@@ -6,11 +6,11 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 15:21:15 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/19 16:10:28 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 10:42:51 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	nb_of_digits(unsigned long nb, int *count)
 {

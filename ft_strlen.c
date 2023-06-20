@@ -6,11 +6,11 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:40:46 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/19 15:02:43 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 10:42:39 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *c)
 {

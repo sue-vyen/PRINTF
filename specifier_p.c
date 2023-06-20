@@ -6,11 +6,11 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/17 15:22:51 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/19 16:15:55 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 10:42:47 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_pointer(unsigned long nb, char *base)
 {

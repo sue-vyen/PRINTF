@@ -6,15 +6,14 @@
 /*   By: sloke <sloke@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 14:40:09 by sloke             #+#    #+#             */
-/*   Updated: 2023/06/20 09:50:41 by sloke            ###   ########.fr       */
+/*   Updated: 2023/06/20 10:44:09 by sloke            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	check_specifier2(const char *format, va_list args, int *len)
 {
-
 	if (*format == 'p')
 		*len += ft_pointer(va_arg(args, unsigned long), "0123456789abcdef");
 	if (*format == 'd' || *format == 'i')
